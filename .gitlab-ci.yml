@@ -12,9 +12,8 @@ pages:
         - make html
         - mv build/html ../public
         - cd ..
-        - find . ! -name 'public' -exec rm -rf {} +
-        - find . -type d -exec chmod 755 {} \;
-        - find . -type f -exec chmod 644 {} \;
+        - find public -type d -exec chmod 755 {} \;
+        - find public -type f -exec chmod 644 {} \;
     artifacts:
         paths:
             - public
