@@ -1,0 +1,16 @@
+stages:
+    - deploy
+
+pages:
+    stage: deploy
+    image: python
+    script:
+        - pip install -U sphinx
+        - pip install --upgrade recommonmark
+        - pip install sphinx_rtd_theme
+        - cd docs
+        - make html
+        - mv build/html ../public
+    artifacts:
+        paths:
+            - public
