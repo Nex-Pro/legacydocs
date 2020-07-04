@@ -11,7 +11,7 @@ pages:
         - cd docs
         - make html
         - mv build/html ../public
-        - chmod -R 777 ../public
+        - chmod -R +t ../public
     artifacts:
         paths:
             - public
