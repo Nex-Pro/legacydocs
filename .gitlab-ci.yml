@@ -5,15 +5,10 @@ pages:
     stage: deploy
     image: python
     script:
-        - pip install -U sphinx
-        - pip install --upgrade recommonmark
-        - pip install sphinx_rtd_theme
+        - pip install -U sphinx sphinx_rtd_theme myst-parser
         - cd docs
         - make html
         - mv build/html ../public
-        - cd ..
-        - find public -type d -exec chmod 755 {} \;
-        - find public -type f -exec chmod 644 {} \;
     artifacts:
         paths:
             - public

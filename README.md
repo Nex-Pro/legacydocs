@@ -44,10 +44,10 @@ We encourage you to compile the documentation locally on your computer prior to 
     C:\> pip install -U sphinx
     ```
 
-6. Install the Markdown parser recommonmark:
+6. Install the Markdown parser myst-parser:
 
     ```
-    C:\> pip install --upgrade recommonmark
+    C:\> pip install --upgrade myst-parser
     ```
 
 7. Install our Sphinx theme:
